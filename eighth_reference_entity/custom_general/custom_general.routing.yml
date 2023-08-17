@@ -1,0 +1,15 @@
+custom_general.custom_node_display_page:
+  path: '/custom-node-display/{node_id}'
+  defaults:
+    _controller: '\Drupal\custom_general\Controller\CustomController::customNodeDisplay'
+    _title: 'Custom Node Display'
+  requirements:
+    _permission: 'access content'
+
+custom_general.custom_display:
+  path: '/custom-display/{node_id}'
+  defaults:
+    _controller: '\Drupal\custom_general\Controller\EntityController::customDisplay'
+    _title: 'Custom Display'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the custom task module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function custom_task_schema() {
+  $schema['custom_task_example'] = [
+    'description' => 'Table description.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique record ID.',
+      ],
+      'firstname' => [
+        'description' => 'firstname',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+      ],
+      'lastname' => [
+        'description' => 'lastname',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+      ],
+      'email' => [
+        'description' => 'email',
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length' => 64,
+      ],
+      'phone' => [
+        'description' => 'phone',
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length' => 64,
+      ],
+      'gender' => [
+        'description' => 'gender',
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length' => 64,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}

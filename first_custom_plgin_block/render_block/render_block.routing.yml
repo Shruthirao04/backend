@@ -1,0 +1,7 @@
+render_block.settings_form:
+  path: '/admin/config/system/render-block'
+  defaults:
+    _title: 'render block settings'
+    _form: 'Drupal\render_block\Form\SettingsForm'
+  requirements:
+    _permission: 'administer render_block configuration'

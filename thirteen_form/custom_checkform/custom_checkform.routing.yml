@@ -1,0 +1,7 @@
+custom_checkform:
+  path: '/checkform'
+  defaults:
+    _title: 'custom'
+    _form: 'Drupal\custom_checkform\Form\CustomForm'
+  requirements:
+    _permission: 'access content'

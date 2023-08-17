@@ -1,0 +1,6 @@
+qnc_task.settings_form:
+  title: 'qnc task'
+  description: 'Configure qnc task.'
+  parent: system.admin_config_system
+  route_name: qnc_task.settings_form
+  weight: 10

@@ -1,0 +1,21 @@
+qnc_task.example:
+  path: '/qnc-task/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\qnc_task\Controller\QncTaskController::build'
+
+  requirements:
+    _permission: 'access content'
+  options:
+    _admin_route: TRUE
+    parameters:
+      node:
+        type: entity:node
+
+qnc_task.settings_form:
+  path: '/admin/config/system/qnc-task'
+  defaults:
+    _title: 'qnc task settings'
+    _form: 'Drupal\qnc_task\Form\SettingsForm'
+  requirements:
+    _permission: 'administer qnc_task configuration'

@@ -1,0 +1,6 @@
+mail_task.settings_form:
+  title: 'mail task'
+  description: 'Configure mail task.'
+  parent: system.admin_config_system
+  route_name: mail_task.settings_form
+  weight: 10

@@ -4,7 +4,6 @@ namespace Drupal\custom_new\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Form\FormBuilderInterface;
-use Drupal\custom_new\Form\CustomForm;
 use Drupal\node\Entity\Node;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -40,7 +39,7 @@ class NewCustomController extends ControllerBase {
    * {@inheritdoc}
    */
   public function build(Node $node) {
-    $form = $this->formBuilder->getForm(CustomForm::class, $node);
+    $form = $this->formBuilder->getForm('\Drupal\custom_new\Form\CustomForm', $node);
     return $form;
   }
 

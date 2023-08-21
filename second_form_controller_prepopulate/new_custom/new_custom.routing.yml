@@ -1,7 +1,20 @@
 new_custom.example:
-  path: '/new-custom/example'
+  path: '/node/{node}/details'
   defaults:
     _title: 'Example'
     _controller: '\Drupal\new_custom\Controller\NewCustomController::build'
   requirements:
-    _permission: 'access content'
+    _permission: 'custom permission'
+  options:
+    _admin_route: TRUE
+    parameters:
+      node:
+        type: entity:node
+
+new_custom.custom_demo:
+  path: "/custom-demo"
+  defaults:
+    _form: '\Drupal\new_custom\Form\CustomForm'
+    _title: "user details "
+  requirements:
+    _permission: "access content"

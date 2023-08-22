@@ -1,0 +1,7 @@
+cache_task.example:
+  path: '/cache-task/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\cache_task\Controller\CacheTaskController::build'
+  requirements:
+    _permission: 'access content'

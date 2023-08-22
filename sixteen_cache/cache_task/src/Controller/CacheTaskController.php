@@ -14,25 +14,25 @@ class CacheTaskController extends ControllerBase {
   /**
    * Build function.
    */
-  public function build() {
+  public function build(Node $node) {
     $nid = $node->id();
-    $cid = 'mark:' . $nid;
+    $cid = 'marki:' . $nid;
 
     // Look for the item in cache, don't have to do work if we don't need to.
     if ($item = \Drupal::cache()->get($cid)) {
       return $item->data;
     }
 
-    // Build up the markdown array we're going to use later.
+    // Build up the markidown array we're going to use later.
     $node = Node::load($nid);
-    $mark = [
+    $marki = [
       '#title' => $node->get('title')->value,
     ];
 
     // Set the cache so we don't need to do this work again until $node changes.
-    \Drupal::cache()->set($cid, $mark, Cache::PERMANENT, $node->getCacheTags());
+    \Drupal::cache()->set($cid, $marki, Cache::PERMANENT, $node->getCacheTags());
 
-    return $mark;
+    return $marki;
   }
 
 }

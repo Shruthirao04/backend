@@ -1,0 +1,6 @@
+eighteen_templateform.settings_form:
+  title: 'eighteen templateform'
+  description: 'Configure eighteen templateform.'
+  parent: system.admin_config_system
+  route_name: eighteen_templateform.settings_form
+  weight: 10

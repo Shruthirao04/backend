@@ -1,0 +1,7 @@
+eighteen_templateform.settings_form:
+  path: '/admin/config/system/eighteen-templateform'
+  defaults:
+    _title: 'eighteen templateform settings'
+    _form: 'Drupal\eighteen_templateform\Form\SettingsForm'
+  requirements:
+    _permission: 'administer eighteen_templateform configuration'

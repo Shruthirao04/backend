@@ -1,0 +1,8 @@
+# Schema for the configuration files of the eighteen templateform module.
+eighteen_templateform.settings:
+  type: config_object
+  label: 'eighteen templateform settings'
+  mapping:
+    example:
+      type: string
+      label: 'Example'

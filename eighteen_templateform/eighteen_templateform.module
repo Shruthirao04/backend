@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Implements various hooks.
+ */
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function eighteen_templateform_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  $config = \Drupal::config('eighteen_templateform.settings');
+  $selected_content_types = $config->get('content_types');
+
+  if (!empty($selected_content_types)) {
+    $node = $variables['elements']['#node'];
+    $node_type = $node->getType();
+
+    if (in_array($node_type, $selected_content_types)) {
+      $suggestions[] = 'node__' . 'customs';
+    }
+  }
+}
